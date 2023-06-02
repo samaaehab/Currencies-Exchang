@@ -2,15 +2,16 @@
     .header {
         display: flex;
       flex-direction: column !important;
+      text-align: center;
+    justify-content: center !important;
     }
     .header a {
       float: none;
       display: block;
-      text-align: left;
     }
-    .header-right {
-      float: none;
-    }
+    .header-right a{
+        margin:5px 0px !important;
+      }
   }
   
 .header {
@@ -31,6 +32,7 @@
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
+    border: 1px solid #871e35;
   }
 
   .logo img{
