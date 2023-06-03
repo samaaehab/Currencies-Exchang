@@ -8,7 +8,8 @@ export class SymbolsService {
 
   constructor(private _httpClient:HttpClient) { }
   private url='http://data.fixer.io/api/';
-  private api_key='?access_key=096456fc98a7bbdadc9c43ad6368c544';
+  private api_key='?access_key=1f24289fcf669c3b6b47ecf99b7b4553';
 
-  public getCurrenciesSymbol() { return this._httpClient.get(this.url+`symbols`+this.api_key); }
+  public getCurrenciesSymbol() { return this._httpClient.get(this.url+`latest`+this.api_key); }
+ 
 }
