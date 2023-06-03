@@ -47,7 +47,7 @@
     height: 55px;
   }
   .left-form{
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
   .right-form{
     display: flex;
@@ -55,14 +55,17 @@
   }
   .right-form select{
    margin-right: 10px;
+
   }
   .right-form button{
     margin-right: 10px;
    }
    .btn-chang{
-    font-size: 24px;
+    font-size: 22px;
+    margin-top: 40px;
     background-color: #871e35;
     color: #ffff;
+    height: 55px;
     width: 65px;
     border: 1px solid #871e35;
     border-radius: 50%;
@@ -142,4 +145,14 @@
   .currency{
     height: 25px !important;
     margin-top: 15px;
+    }
+    .right-form div{
+        width: 30%;
+    }
+    .form-select{
+        width: 70% !important;
+        height: 55px;
+        color: var(--bs-body-color) !important;
+    background-color: var(--bs-body-bg) !important;
+    border: var(--bs-border-width) solid var(--bs-border-color) !important;
     }
