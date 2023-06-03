@@ -1,0 +1,145 @@
+@media screen and (max-width: 480px) {
+    .home-container{
+        padding: 50px 0 !important;
+    } 
+      .convert{
+        
+    width: 155px !important;
+      }
+      .Details{
+        
+    width: 155px !important;
+      }
+      .Form2-container{
+        display: block !important;
+      }
+      label{
+        font-size: 15px !important;
+      }
+      .first-form {
+       
+        width: 245px !important; 
+      }
+      .left-form input{
+        width: 70% !important;
+      }
+  }
+.bac {
+    background: rgba(0, 0, 0, 0) url("https://i.postimg.cc/Dyh6K84J/coins-paper-money-globe-white-statistic-form-background.jpg");
+    /* background-image: url("../../../assets/imags/homeback.jpg") ; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: -1%;
+  }
+  
+  .box {
+    background-color: rgba(43, 43, 49, 0.7);
+   
+  }
+  .home-container{
+    text-align: -webkit-center;
+    padding: 100px 0;
+    
+  }
+  .form-control{
+    width: 25% !important;
+    height: 55px;
+  }
+  .left-form{
+    margin-bottom: 40px;
+  }
+  .right-form{
+    display: flex;
+    justify-content: center;
+  }
+  .right-form select{
+   margin-right: 10px;
+  }
+  .right-form button{
+    margin-right: 10px;
+   }
+   .btn-chang{
+    font-size: 24px;
+    background-color: #871e35;
+    color: #ffff;
+    width: 65px;
+    border: 1px solid #871e35;
+    border-radius: 50%;
+   }
+   .right-form  button.btn-chang:hover{
+    border: 1px solid #e8ba00;
+
+   }
+   .left-form label{
+    color: #ffff;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Noto Sans', sans-serif;
+   }
+  .right-form label{
+    color: #ffff;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 10px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  .Form2-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .first-form{
+    width: 30%;
+    margin-right: 80px;
+  }
+  .first-form {
+  
+    margin-right: 0px !important;
+    
+  }
+  .secound-form{
+    margin-top: 40px;
+
+  }
+  .convert{
+    display: block;
+    color: #ffff;
+    width: 320px;
+    background-color: #871e35;
+    border: 1px solid #ffff;
+    /* border-radius: 30%; */
+    height: 45px;
+  }
+  .secound-form  button.convert:hover{
+    border: 1px solid #ffff;
+    background-color: #e8ba00;
+
+   }
+  .txt-result{
+    color: #ffff;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  .Details{
+    padding: 10px;
+    display: block;
+    color: #ffff !important;
+    width: 320px;
+    border: 1px solid #871e35;
+    /* border-radius: 30%; */
+    height: 45px; 
+    margin-top: 15px;
+  }
+  .secound-form  a.Details:hover{
+    border: 1px solid #ffff;
+    background-color: #e8ba00;
+  }
+  .first-form input{
+    width: 80% !important; 
+  }
+  .currency{
+    height: 25px !important;
+    margin-top: 15px;
+    }
