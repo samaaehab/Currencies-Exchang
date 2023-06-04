@@ -21,7 +21,8 @@ exchangFrom:any;
 exchangTo:any;
 currencySymbol:string=""
 input:any
-
+fromData:any
+toData:any
 
 ngOnInit():void{
 
@@ -48,17 +49,15 @@ convertCurrencies(fromCurrency:any,toCurrency:any,amountCurrency:any){
 
  this.convertResult=(this.toRate/this.fromRate) * this.amountCurrencyData;
  /*console.log(this.convertResult);*/
- this.convertDiscribtion="1.00 "+ this.toCurrencyData + " = " + this.fromRate +" "+ this.fromCurrencyData;
+ this.convertDiscribtion="1.00 "+ this.fromCurrencyData + " = " + this.toRate +" "+ this.toCurrencyData;
 }
-exchangeCurrenciesSymbols(fromCurrency:any,toCurrency:any){
-this.exchangFrom=toCurrency;
-this.exchangTo=fromCurrency;
+exchangeCurrenciesSymbols(){
+this.input=this.fromData;
+this.fromData=this.toData;
+this.toData=this.input;
+
 
 }
 
-getCurrencySymbol(symbole:string){
-  this.currencySymbol=symbole;
-  console.log(this.currencySymbol)
-}
 
 }

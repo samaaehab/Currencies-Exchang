@@ -9,15 +9,15 @@
                 <div class="right-form">
                     <div>
                       <label for="Ainputmount">From</label>
-                    <select  #fromInput class="form-select" aria-label="Default select example" (change)="getCurrencySymbol(fromInput.value)">
-                      <option  *ngFor="let item of currenciesSymbolsArray" value="{{item}}">{{item}}</option>
+                    <select  [(ngModel)]="fromData" class="form-select" aria-label="Default select example" >
+                      <option  *ngFor="let item of currenciesSymbolsArray; let crruntIndex=index" value="{{item}}">{{item}}</option>
                      
                     </select>
                     </div>
-                      <button class="btn-chang" (click)="exchangeCurrenciesSymbols(fromInput.value,toInput.value)"> <i class="fa fa-exchange"></i></button>
+                      <button class="btn-chang" (click)="exchangeCurrenciesSymbols()"> <i class="fa fa-exchange"></i></button>
                      <div>
                       <label for="Ainputmount">To</label>
-                      <select #toInput class="form-select" aria-label="Default select example">
+                      <select [(ngModel)]="toData" class="form-select" aria-label="Default select example">
                         <option  *ngFor="let item of currenciesSymbolsArray" value="{{item}}">{{item}}</option>
                       </select>
                      </div>
@@ -29,8 +29,8 @@
                     <input class="form-control currency" value={{convertDiscribtion}} type="text" readonly> 
                   </div>
                 <div class="secound-form">
-                    <button class="convert" (click)="convertCurrencies(fromInput.value,toInput.value,amountInput.value)"> Convert</button>
-                    <a class="Details" routerLink='details/{{currencySymbol}}'> More Details</a>
+                    <button class="convert" (click)="convertCurrencies(fromData,toData,amountInput.value)"> Convert</button>
+                    <a class="Details" routerLink="/details/{{fromData}}"> More Details</a>
                 </div>
               </div>
         </div>
