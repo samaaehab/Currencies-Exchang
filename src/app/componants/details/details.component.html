@@ -1,7 +1,11 @@
 <div class="bac">
     <div class="box">
         <div class="home-container">
-
+<div class="title">
+    <h1>
+        {{symbole}} : {{currencyTitle}}
+    </h1>
+</div>
                 <div class="left-form" >
                     <label for="inputAmount">Amount</label>
                     <input #amountInput class="form-control" type="number" placeholder="Inter Your Amount"> 
@@ -9,8 +13,8 @@
                 <div class="right-form">
                     <div>
                       <label for="Ainputmount">From</label>
-                    <select  #fromInput class="form-select" aria-label="Default select example" (change)="getCurrencySymbol(fromInput.value)">
-                      <option  *ngFor="let item of currenciesSymbolsArray" value="{{item}}">{{item}}</option>
+                    <select  #fromInput class="form-select" aria-label="Default select example" disabled="true">
+                      <option>{{symbole}}</option>
                      
                     </select>
                     </div>
@@ -30,7 +34,7 @@
                   </div>
                 <div class="secound-form">
                     <button class="convert" (click)="convertCurrencies(fromInput.value,toInput.value,amountInput.value)"> Convert</button>
-                    <a class="Details" routerLink='details/{{currencySymbol}}'> More Details</a>
+                    
                 </div>
               </div>
         </div>
