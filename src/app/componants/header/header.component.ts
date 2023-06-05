@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   EUR:string="EUR"
+  USD:string="USD"
+  GBP:string="GBP"
   
 }

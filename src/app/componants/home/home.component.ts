@@ -20,9 +20,11 @@ convertDiscribtion:any;
 exchangFrom:any;
 exchangTo:any;
 currencySymbol:string=""
-input:any
-fromData:any
-toData:any
+input:any;
+fromData:any;
+toData:any;
+amountData!:number;
+
 
 ngOnInit():void{
 
@@ -55,9 +57,8 @@ exchangeCurrenciesSymbols(){
 this.input=this.fromData;
 this.fromData=this.toData;
 this.toData=this.input;
-
-
 }
+
 
 
 }

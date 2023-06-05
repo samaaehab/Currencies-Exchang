@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
+  toSymbpl!:any
   symbole:any;
   currenciesSymbols:any;
 currenciesSymbolsArray:Array<string>=[];
@@ -22,10 +23,13 @@ exchangTo:any;
 currenciesdescribtion:any;
 currenciesdescribtionArray:Array<string>=[];
 currencyTitle:any
+toData:any;
 constructor(private _activatedRoute:ActivatedRoute,private _symbolService:SymbolsService){}
 ngOnInit(): void {
   this._activatedRoute.paramMap.subscribe(params => {
     this.symbole = params.get('cSymbol');
+    this.toSymbpl = params.get('cTpSymbol');
+    this.toData=this.toSymbpl
   });
   this._symbolService.getCurrenciesSymbol().subscribe(
     (res: any) => {
@@ -54,11 +58,7 @@ convertCurrencies(fromCurrency:any,toCurrency:any,amountCurrency:any){
 
  this.convertResult=(this.toRate/this.fromRate) * this.amountCurrencyData;
  /*console.log(this.convertResult);*/
- this.convertDiscribtion="1.00 "+ this.toCurrencyData + " = " + this.fromRate +" "+ this.fromCurrencyData;
+ this.convertDiscribtion="1.00 "+ this.toCurrencyData + " = " + this.toRate +" "+ this.toCurrencyData;
 }
-exchangeCurrenciesSymbols(fromCurrency:any,toCurrency:any){
-  this.exchangFrom=toCurrency;
-  this.exchangTo=fromCurrency;
-  
-  }
+
 }

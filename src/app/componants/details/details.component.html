@@ -18,10 +18,10 @@
                      
                     </select>
                     </div>
-                      <button class="btn-chang" (click)="exchangeCurrenciesSymbols(fromInput.value,toInput.value)"> <i class="fa fa-exchange"></i></button>
+                      <button class="btn-chang"  disabled="true"> <i class="fa fa-exchange"></i></button>
                      <div>
                       <label for="Ainputmount">To</label>
-                      <select #toInput class="form-select" aria-label="Default select example">
+                      <select [(ngModel)]="toData" class="form-select" aria-label="Default select example">
                         <option  *ngFor="let item of currenciesSymbolsArray" value="{{item}}">{{item}}</option>
                       </select>
                      </div>
@@ -33,7 +33,7 @@
                     <input class="form-control currency" value={{convertDiscribtion}} type="text" readonly> 
                   </div>
                 <div class="secound-form">
-                    <button class="convert" (click)="convertCurrencies(fromInput.value,toInput.value,amountInput.value)"> Convert</button>
+                    <button class="convert" (click)="convertCurrencies(fromInput.value,toData,amountInput.value)"> Convert</button>
                     
                 </div>
               </div>

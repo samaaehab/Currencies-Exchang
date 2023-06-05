@@ -1,38 +1,45 @@
 <div class="bac">
     <div class="box">
         <div class="home-container">
-
+<div class="head">
+  <h1>
+    Currency Exchanger
+  </h1>
+</div>
+              <div class="content">
                 <div class="left-form" >
-                    <label for="inputAmount">Amount</label>
-                    <input #amountInput class="form-control" type="number" placeholder="Inter Your Amount"> 
-                </div>
-                <div class="right-form">
-                    <div>
-                      <label for="Ainputmount">From</label>
-                    <select  [(ngModel)]="fromData" class="form-select" aria-label="Default select example" >
-                      <option  *ngFor="let item of currenciesSymbolsArray; let crruntIndex=index" value="{{item}}">{{item}}</option>
-                     
-                    </select>
-                    </div>
-                      <button class="btn-chang" (click)="exchangeCurrenciesSymbols()"> <i class="fa fa-exchange"></i></button>
-                     <div>
-                      <label for="Ainputmount">To</label>
-                      <select [(ngModel)]="toData" class="form-select" aria-label="Default select example">
-                        <option  *ngFor="let item of currenciesSymbolsArray" value="{{item}}">{{item}}</option>
-                      </select>
-                     </div>
-                </div>
-              <div class="Form2-container">
-                <div class="first-form">
-                    <label class="txt-result" for="result">The Result</label>
-                    <input class="form-control result" value={{convertResult}} type="number" readonly> 
-                    <input class="form-control currency" value={{convertDiscribtion}} type="text" readonly> 
-                  </div>
-                <div class="secound-form">
-                    <button class="convert" (click)="convertCurrencies(fromData,toData,amountInput.value)"> Convert</button>
-                    <a class="Details" routerLink="/details/{{fromData}}"> More Details</a>
-                </div>
+                  <label for="inputAmount">Amount</label>
+                  <input [(ngModel)]="amountData" class="form-control" type="number" placeholder="Inter Your Amount"> 
               </div>
+              <div class="right-form">
+                  <div>
+                    <label for="Ainputmount">From</label>
+                  <select  [(ngModel)]="fromData" class="form-select" aria-label="Default select example" disabled="{{amountData == null}}">
+                    <option  *ngFor="let item of currenciesSymbolsArray; let crruntIndex=index" value="{{item}}">{{item}}</option>
+                   
+                  </select>
+                  </div>
+                    <button class="btn-chang" disabled="{{amountData == null}}" (click)="exchangeCurrenciesSymbols()"> <i class="fa fa-exchange"></i></button>
+                   <div>
+                    <label for="Ainputmount">To</label>
+                    <select [(ngModel)]="toData" class="form-select" aria-label="Default select example" disabled="{{amountData == null}}">
+                      <option  *ngFor="let item of currenciesSymbolsArray" value="{{item}}">{{item}}</option>
+                    </select>
+                   </div>
+              </div>
+            <div class="Form2-container">
+              <div class="first-form">
+                  <label class="txt-result" for="result">The Result</label>
+                  <input class="form-control result" value={{convertResult}} type="number" readonly> 
+                  <input class="form-control currency" value={{convertDiscribtion}} type="text" readonly> 
+                </div>
+              <div class="secound-form">
+                  <button class="convert" disabled="{{amountData == null}}" (click)="convertCurrencies(fromData,toData,amountData)"> Convert</button>
+                  <a class="Details" routerLink="/details/{{fromData}}"> More Details</a>
+              </div>
+            </div>
+              </div>
+           
         </div>
             
     </div>

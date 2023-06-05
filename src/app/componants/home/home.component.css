@@ -1,0 +1,11 @@
+.head{
+    margin-bottom: 45px;
+}
+.head h1{
+    color :#f1f1f1
+}
+.content{
+    width: 90%;
+    padding: 45px 0px;
+    border: 2px solid #871e35;
+}

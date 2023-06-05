@@ -8,6 +8,7 @@ const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'home', component:HomeComponent},
   {path: 'details/:cSymbol', component:DetailsComponent},
+  {path: 'details/:cSymbol/:cTpSymbol', component:DetailsComponent},
 
 
 ];
